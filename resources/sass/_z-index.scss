@@ -1,0 +1,47 @@
+.preloader {
+    z-index: 101;
+}
+
+.revealer {
+    z-index: 100;
+}
+
+.edition-bar {
+    z-index: 90;
+}
+
+.js-textedit {
+    z-index: 90;
+}
+
+.menu1 {
+    &-sidebar,
+    &-bar1,
+    &-bar2,
+    &-button--sm {
+        z-index: 50;
+    }
+
+    &-backdrop,
+    &-content {
+        z-index: 40;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .header > .container:first-child {
+        z-index: 10;
+    }
+}
+
+#gdpr-cookie-message {
+    z-index: 10;
+}
+
+// .cookie-consent {
+//     z-index: 10;
+// }
+
+.header__logo {
+    z-index: 10;
+}

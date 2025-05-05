@@ -1,0 +1,77 @@
+.header {
+    @include media-breakpoint-down(lg) {
+        padding-top: 80px;
+        
+        & > .container:first-child {
+            background-color: rgba($color: #fff, $alpha: 0.9);
+            padding-bottom: 10px;
+            -webkit-box-shadow: 0px 2px 5px 0px rgba(102,102,102,0.5);
+            -moz-box-shadow: 0px 2px 5px 0px rgba(102,102,102,0.5);
+            box-shadow: 0px 2px 5px 0px rgba(102,102,102,0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    }
+    
+    &__logo {
+        display: block;
+        max-width: 10rem;
+
+        @include media-breakpoint-down(lg) {
+            max-width: 4.69rem;
+            margin-left: 1.25rem;
+        }
+    }
+
+    &__title-wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__title {
+        @extend %titleL;
+        font-family: $font-bold;
+        min-width: 100px;
+
+        @include media-breakpoint-up(xl) {
+            margin-right: 4rem;
+        }
+        
+        @include media-breakpoint-down(lg) {
+            margin-top: 20px;
+            color: $c-primary !important;
+            text-transform: uppercase;
+            font-family: $font-bold;
+            width: 100%;
+            text-align: right;
+            font-size: 1.2rem;
+            padding-right: 80px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    &__line {
+        display: none;
+        position: relative;
+
+        @include media-breakpoint-up(xl) {
+            display: block;
+        }
+
+        &::before {
+            content: "";
+            width: 100vw;
+            height: 1px;
+            display: block;
+            background-color: $c-primary-light;
+            position: absolute;
+            top: 50%;
+            left: 20px;
+        }
+    }
+}

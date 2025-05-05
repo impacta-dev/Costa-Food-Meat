@@ -1,0 +1,103 @@
+.footer {
+    background-color: $c-primary;
+    color: #fff;
+    overflow: hidden !important;
+
+    a:link,
+    a:hover,
+    a:active,
+    a:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    %footer-divider {
+        @include media-breakpoint-down(md) {
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                @include transform(translateX(-50%));
+                width: 30vw;
+                height: 2px;
+                background-color: $c-primary-light2;
+            }
+        }
+    }
+
+    &__logo {
+        max-width: 140px;
+    }
+
+    &__menu {
+        margin-top: 40px;
+        padding-bottom: 40px;
+        @extend %footer-divider;
+
+        @include media-breakpoint-up(lg) {
+            border-left: 1px solid $c-primary-light2;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            font-family: $font-bold;
+        }
+    }
+    
+    &__info {
+        margin-top: 40px;
+        padding-bottom: 40px;
+        color: $c-primary-light;
+        @extend %footer-divider;
+
+        @include media-breakpoint-up(lg) {
+            border-left: 1px solid $c-primary-light2;
+        }
+
+        strong {
+            color: #fff;
+        }
+    }
+
+    &__certs {
+        margin-top: 40px;
+
+        @include media-breakpoint-up(lg) {
+            border-left: 1px solid $c-primary-light2;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        img {
+            max-height: 6rem;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__bottom {
+        border-top: 1px solid $c-primary-light2;
+    }
+
+    &__legal {
+        @extend %titleXS;
+        color: $c-primary-light;
+
+        a:link, a:hover, a:active, a:visited {
+            color: $c-primary-light;
+        }
+    }
+
+    &__copy {
+        font-family: $font-bold;
+    }
+}

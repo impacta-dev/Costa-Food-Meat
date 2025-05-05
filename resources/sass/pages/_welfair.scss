@@ -1,0 +1,70 @@
+.header {
+    background: $c-primary url('/img/pages/welfair/welfair-bg.svg?v1') no-repeat 120% center;
+    color: #ffffff;
+
+    &__subtitle {
+        @extend %titleL;
+        font-family: $font-bold;
+    }
+
+    &__image {
+        background: transparent url('/img/pages/welfair/header.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    &__seal {
+        width: 114px;
+        height: auto;
+    }
+}
+
+.intro {
+    @extend %paddingTop, %paddingBottom;
+
+    strong {
+        color: $c-primary;
+    }
+
+    &__title {
+        @extend %titleL;
+    }
+
+    &__item {
+        color: $c-primary;
+        font-family: $font-bold;
+        @extend %titleM;
+        line-height: $lineHeightM;
+
+        & > div {
+            background-color: $c-primary-light;
+            margin-bottom: 2rem;
+            text-align: center;
+            padding: 4rem;
+        }
+
+        img {
+            height: 120px;
+        }
+    }
+}
+
+.info {
+    @extend %paddingTop, %paddingBottom;
+    @extend %titleM;
+    background: transparent url('/img/pages/welfair/info.jpg') no-repeat center center;
+    background-size: cover;
+    
+    &__inner {
+        max-width: 900px;
+        text-align: center;
+        color: #ffffff;
+        margin: 0 auto;
+    }
+    
+    &__logo {
+        display: block;
+        height: auto;
+        margin: 0px 30px 70px 30px;
+    }
+
+}

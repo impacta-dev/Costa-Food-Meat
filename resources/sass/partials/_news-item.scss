@@ -1,0 +1,92 @@
+.news-item {
+    position: relative;
+    border: 1px solid $c-gray-light;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 2rem;
+    
+    &:link, &:hover, &:active, &:visited {
+        text-decoration: none;
+    }
+    
+    @include media-breakpoint-up(xl) {
+        padding: 6rem 3rem;
+
+        &:hover {
+            border: 0;
+    
+            .news-item__image {
+                visibility: visible;
+                transform: scale(1.5);
+            }
+    
+            .news-item__title,
+            .news-item__category,
+            .news-item__date {
+                color: #ffffff;
+            }
+        }
+    }
+
+    &__image {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: transform 4s linear;
+
+        @include media-breakpoint-up(xl) {
+            // visibility: hidden;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+        }
+    }
+
+    &__category {
+        color: #ffffff;
+        @extend %titleXS;
+        margin-bottom: 2.5rem;
+        
+        @include media-breakpoint-up(xl) {
+            // color: $c-primary;
+            margin-bottom: 5rem;
+        }
+    }
+    
+    &__title {
+        color: #ffffff;
+        display: block;
+        font-family: $font-bold;
+        @extend %titleM;
+        @extend %titleM;
+        margin-bottom: 2.5rem;
+        
+        @include media-breakpoint-up(xl) {
+            // color: $c-gray;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__date {
+        color: #ffffff;
+        font-family: $font-bold;
+        @extend %titleXS;
+
+        @include media-breakpoint-up(xl) {
+            // color: $c-gray;
+        }
+    }
+}

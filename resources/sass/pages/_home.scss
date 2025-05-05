@@ -1,0 +1,335 @@
+.header {
+    width: 100vw;
+    background: #000000 url('/img/pages/home/welfair-bg.svg') no-repeat right center;
+    color: #ffffff;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+        height: 100vh;
+    }
+
+    &__logo {
+        position: relative;
+    }
+
+    .carousel {
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+        }
+    }
+
+    .carousel-controls {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        .container, .row, .row > div {
+            position: relative;
+            height: 100%
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+    }
+
+    .carousel-item {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100%;
+        padding: 10rem 3rem;
+        
+        @include media-breakpoint-up(lg) {
+            height: 100vh;
+            padding: 0;
+        }
+
+        & > .container {
+            height: 100%;
+            position: relative;
+
+            & > .row {
+                height: 100%;
+            }
+        }
+    }
+
+    &__slide-text {
+        @extend %titleL;
+        width: 100%;
+        height: 100%;
+        font-family: $font-bold;
+        display: flex;
+
+        & > div {
+            max-width: 700px;
+        }
+        
+        &--bl {
+            @extend .header__slide-text;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+            @include media-breakpoint-up(lg) {
+                text-align: left;
+                justify-content: flex-start;
+                align-items: flex-end;
+                padding-bottom: 10%;
+            }
+        }
+        
+        &--tr {
+            @extend .header__slide-text;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            
+            @include media-breakpoint-up(lg) {
+                text-align: right;
+                align-items: flex-start;
+                justify-content: flex-end;
+                padding-top: 10%;
+                padding-right: 100px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .mouse {
+            position: absolute;
+            right: 0;
+            bottom: 2rem;
+            left: 0;
+            margin: auto;
+            width :34px;
+            height: 55px;
+    
+            & > div {
+                width: 3px;
+                padding: 10px 15px;
+                height: 35px;
+                border: 2px solid #fff;
+                border-radius: 25px;
+                opacity: 0.75;
+                box-sizing: content-box;
+    
+                & > div {
+                    width: 3px;
+                    height: 10px;
+                    border-radius: 25%;
+                    background-color: #fff;
+                    animation-name: scroll;
+                    animation-duration: 2.2s;
+                    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+                    animation-iteration-count: infinite;
+                }
+            }
+        }
+    
+        @keyframes scroll {
+            0% { opacity: 0; }
+            10% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(15px); opacity: 0;}
+        }
+    }
+}
+
+// .header {
+//     @extend %paddingBottom;
+//     background: #000000 url('/img/pages/home/welfair-bg.svg') no-repeat right center;
+//     color: #ffffff;
+
+//     &__subtitle {
+//         @extend %titleM;
+//         color: $c-primary;
+//         font-family: $font-light;
+//         margin-bottom: 2rem;
+//     }
+    
+//     &__text {
+//         @extend %titleM;
+//         font-family: $font-bold;
+//     }
+
+//     &__btn {
+//         @extend .btn;
+//         text-transform: uppercase;
+//     }
+
+//     &__welfair {
+//         max-width: 140px;
+//     }
+// }
+
+@keyframes mouseScroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+}
+
+.intro {
+    @extend %paddingTop, %paddingBottom;
+    position: relative;
+
+    @include media-breakpoint-up(xxl) {
+        &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 90%;
+            background-color: $c-primary;
+            position: absolute;
+            top: 0;
+            left: 80px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.8rem;
+    }
+
+    &__title {
+        @extend %titleXL;
+        color: $c-primary;
+        font-family: $font-normal;
+        margin-bottom: 40px;
+
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 8rem;
+        }
+    }
+
+    &__btn {
+        @extend .btn;
+
+        @include  media-breakpoint-down(xl) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.group {
+    @extend %paddingTop, %paddingBottom;
+    background: url('/img/pages/home/group.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+
+    &__title {
+        @extend %titleM;
+    }
+
+    &__subtitle {
+        @extend %titleL;
+        font-family: $font-bold;
+    }
+
+    &__text {
+        @extend %titleS;
+        margin-top: 40px;
+
+        @include media-breakpoint-up(xl) {
+            margin-top: 180px;
+        }
+    }
+}
+
+.welfair {
+    @extend %paddingTop, %paddingBottom;
+    
+    &__title {
+        @extend %titleXL;
+        color: $c-primary;
+        font-family: $font-normal;
+    }
+    
+    &__1 {
+        @extend %paddingBottom;
+    }
+}
+
+.renders {
+    @extend %paddingTop, %paddingBottom;
+    background-color: #000000;
+
+    &__viewer {
+        height: 250px;
+        margin-top: -70px;
+        
+        @include media-breakpoint-up(xl) {
+            height: 500px;
+            margin-top: 0;
+        }
+    }
+
+    &__name {
+        @extend %titleM;
+    }
+    
+    &__controls {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+
+        @include media-breakpoint-up(xl) {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .btn-prev {
+        margin-left: 2rem;
+    }
+
+    .btn-next {
+        margin-left: .5rem;
+    }
+
+    &__info {
+        @include media-breakpoint-up(xl) {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 400px;
+        }
+    }
+
+    &__title {
+        color: $c-gray;
+    }
+
+    &__text {
+        @extend %titleM;
+        font-family: $font-bold;
+        margin-bottom: 2rem;
+    }
+}
+
+.posts {
+    @extend %paddingTop, %paddingBottom;
+    background-color: $c-gray-light;
+
+    &__title {
+        color: $c-primary;
+        font-family: $font-bold;
+        @extend %titleS;
+        margin-bottom: 2rem;
+    }
+
+    @include media-breakpoint-down(lg) {
+        .news-item:nth-child(3) {
+            display: none;
+        }
+    }
+}

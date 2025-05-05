@@ -1,0 +1,63 @@
+.header {
+    background-color: $c-primary;
+    color: #ffffff;
+    margin-bottom: 2rem;
+
+    &__subtitle {
+        @extend %titleXL;
+    }
+
+    &__subtitle2 {
+        @extend %titleXL;
+        font-family: $font-bold;
+        margin-bottom: 40px;
+
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__text {
+        color: $c-primary-light;
+
+        a:link, a:hover, a:active, a:visited {
+            color: $c-primary-light;
+            text-decoration: underline;
+        }
+    }
+}
+
+.certificates {
+    margin-bottom: 3rem;
+    
+    > .row {
+        border-bottom: 1px solid $c-primary;
+    }
+
+    &__title {
+        font-family: $font-bold;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: bolder;
+        color: $c-primary;
+    }
+
+    &__text {
+        margin-bottom: 2rem;
+        font-size: 1.35rem;
+        line-height: 1.5rem;
+    }
+}
+
+.certificate {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    &__name {
+        color: #000 !important;
+    }
+
+    &__image {
+        max-width: 175px !important;
+    }
+}

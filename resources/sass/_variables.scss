@@ -1,0 +1,60 @@
+// Body
+$body-bg: #ffffff;
+
+// Typography
+$font-family-sans-serif: 'EuclidFlex';
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+$lineHeightXXL: 4.6rem;
+$lineHeightM: 2.1rem;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+$c-dark: #000000;
+$c-primary: #b9072b;
+$c-primary-dark: #861c2d;
+$c-primary-light: #fbe8eb;
+$c-primary-light2: #cb4560;
+$c-gray: #5d5d5d;
+$c-gray-light: #efefef;
+$c-blue: #0071bb;
+$c-green: #a0b105;
+
+$primary: $c-primary;
+
+// Grid
+$container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+  xl: 1400px
+  // xl: 1920px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  // xl: 1200px,
+  xl: 1080px,
+  // xxl: 1400px,
+  xxl: 1200px,
+  full: 2000px
+) !default;
+
+// Custom vars
+$menubarWidth: 80px;
+$menuborderWidth: 20px;
+$logoWidth: 240px;

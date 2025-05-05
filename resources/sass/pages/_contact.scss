@@ -1,0 +1,61 @@
+.header {
+    color: $c-primary;
+
+    &__line {
+
+        &::before {
+            background-color: $c-primary;
+        }
+    }
+
+    &__subtitle {
+        @extend %titleM;
+        color: $c-primary;
+        margin-bottom: 40px;
+        margin-top: 2rem;
+        
+        @include media-breakpoint-up(xl) {
+            margin-top: -50px;
+            margin-bottom: 100px;
+        }
+    }
+}
+
+.content {
+    @extend %paddingBottom;
+}
+
+.map {
+    margin-bottom: -20px;
+}
+
+form {
+    @extend %titleXS;
+
+    a:link, a:hover, a:active, a:visited {
+        color: $body-color;
+        text-decoration: underline;
+    }
+    
+    input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
+    
+    input[type=text],
+    input[type=email],
+    textarea {
+        border: 1px solid $c-primary;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+
+        &::placeholder {
+            text-transform: capitalize;
+        }
+    }
+
+    input[type=submit] {
+        width: 100%;
+    }
+}
+

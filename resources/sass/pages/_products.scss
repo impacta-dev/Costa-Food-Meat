@@ -1,0 +1,79 @@
+& {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.header {
+
+  .btn-prev, .btn-next {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+  }
+  
+  .btn-next {
+    right: 2.5rem;
+  }
+  
+  .btn-prev {
+    right: 9rem;
+  }
+
+  &__logo {
+    z-index: 1;
+  }
+  
+  &__title {
+    z-index: 1;
+  }
+  
+  &__line {
+    z-index: 1;
+
+    &::before {
+      background-color: #a1a1a1;
+    }
+  }
+}
+
+.renders {
+  
+  &__viewer {
+    height: 250px;
+    margin-top: -50px;
+
+    @include media-breakpoint-up(xl) {
+      height: initial;
+      margin-top: -200px;
+      height: 600px;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+  @include media-breakpoint-up(xl) {
+    position: absolute;
+    top: 50%;
+    height: 100px;
+    right: 300px;
+  }
+  }
+
+  &__text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @extend %titleM;
+    font-family: $font-bold;
+    pointer-events: none;
+    
+    p {
+      max-width: 400px;
+    }
+  }
+}

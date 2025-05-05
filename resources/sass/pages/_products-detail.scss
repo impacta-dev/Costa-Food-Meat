@@ -1,0 +1,157 @@
+& {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.product {
+    @extend %paddingBottom;
+
+    &__image {
+        position: relative;
+        display: block;
+
+        @include media-breakpoint-up(lg) {
+            max-height: 500px;
+
+            &:hover {
+                .product__image-zoom {
+                    visibility: visible;
+                }
+            }
+        }
+
+        img {
+            max-height: 300px;
+        }
+
+        &-zoom {
+            visibility: hidden;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::after {
+                content: "";
+                width: 30px;
+                height: 30px;
+                background: transparent url('/img/icons/zoom-in-w.svg') no-repeat center center;
+                background-size: contain;
+            }
+        }
+    }
+
+    &__title {
+        color: $c-primary;
+        font-family: $font-bold;
+        @extend %titleL;
+        margin-bottom: 1rem;
+    }
+
+    &__ref {
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 2.5rem;
+        }
+    }
+    
+    &__label {
+        margin-top: 2.5rem;
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+        font-family: $font-bold;
+    }
+    
+    &__feature {
+        margin-bottom: 0;
+
+        &:last-of-type {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__btn {
+        @extend .btn;
+        width: 100%;
+        background-color: #ffffff;
+        color: $c-primary;
+
+        &:hover {
+            color: $c-primary;
+            background-color: $c-primary-light;
+        }
+    }
+
+    &__thumbs {
+        margin-top: 5rem;
+
+        a {
+            display: inline-block;
+            border: 1px solid $c-gray;
+            width: 25%;
+            height: 60px;
+            margin-right: 8px;
+            padding: 4px;
+            
+            &:last-child {
+                margin-right: 0;
+            }
+            
+            div {
+                width: 100%;
+                height: 100%;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+form {
+    @extend %titleXS;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid $c-gray;
+
+    a:link, a:hover, a:active, a:visited {
+        color: $c-gray-light;
+        text-decoration: underline;
+    }
+    
+    input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
+    
+    input[type=text],
+    input[type=email],
+    textarea {
+        border: 1px solid $c-gray;
+        background-color: $c-gray-light;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    label {
+        font-family: $font-bold;
+        text-transform: capitalize;
+
+        &.form-legal {
+            @extend %titleXS;
+            color: $c-gray-light;
+            font-family: $font-light;
+        }
+
+        a:link, a:hover, a:active, a:visited {
+            color: $c-gray-light;
+        }
+    }
+}
+

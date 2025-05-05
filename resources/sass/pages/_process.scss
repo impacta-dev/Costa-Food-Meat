@@ -1,0 +1,129 @@
+.header {
+    background-color: $c-primary;
+    color: #ffffff;
+
+    &__content {
+        background: transparent url('/img/pages/process/header.jpg') no-repeat center center;
+        background-size: cover;
+        padding: 2rem;
+        
+        @include media-breakpoint-up(xl) {
+            margin-top: 4rem;
+            padding: 5rem;
+        }
+
+        a:link, a:hover, a:active, a:visited {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    }
+
+    &__subtitle {
+        @extend %titleXXL;
+        font-family: $font-bold;
+    }
+}
+
+.steps {
+    @extend %paddingTop, %paddingBottom;
+    
+    &__step {
+
+        @include media-breakpoint-down(xl) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__title {
+        @extend %titleOMG;
+        color: $c-primary;
+    }
+
+    &__number {
+        font-family: $font-bold;
+        font-size: 4rem;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 6.2rem;
+        }
+    }
+    
+    &__content{
+        background-color: $c-gray-light;
+    }
+
+    &__subtitle, &__info {
+        padding: 3rem 4rem;
+
+        @include media-breakpoint-down(xl) {
+            padding: 1rem;
+        }
+    }
+
+    &__subtitle {
+        background-color: $c-primary;
+        color: #ffffff;
+        text-transform: uppercase;
+
+        h2 {
+            margin: 0;
+        }
+    }
+
+    &__info {
+        color: $c-gray;
+
+        img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-top: 3rem;
+            margin-right: 2rem;
+        }
+    }
+
+    &__image {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 250px;
+
+        @include media-breakpoint-up(lg) {
+            min-height: 350px;
+        }
+    }
+}
+
+.traceability {
+    @extend %paddingBottomFooter;
+    color: $c-gray;
+
+    &__title {
+        @extend %titleXXL;
+        font-family: $font-bold;
+        color: $c-primary;
+        margin-bottom: 2rem;
+    }
+
+    &__header {
+        @extend %titleM;
+        color: $c-primary;
+        
+        @include media-breakpoint-up(xl) {
+            padding: 3rem;
+            border: 2px solid $c-primary;
+        }
+
+        img {
+            max-width: 155px;
+        }
+    }
+
+    &__claim {
+        @extend %titleL;
+        font-family: $font-bold;
+
+        strong {
+            color: $c-blue;
+        }
+    }
+}

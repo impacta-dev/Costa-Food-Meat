@@ -1,0 +1,79 @@
+@import 'mixins';
+@import 'variables';
+@import '~bootstrap/scss/bootstrap';
+@import 'fonts';
+@import 'main';
+@import 'z-index';
+
+@import 'partials/product-renders';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/menu1';
+@import 'partials/editor';
+@import 'partials/preloader';
+@import 'partials/news-item';
+@import 'partials/cookieControl';
+
+@include media-breakpoint-up(md) {
+    html {
+        font-size: 13px;
+    }
+}
+
+body {
+
+    &.page- {
+    
+        &about {
+            @import 'pages/about';
+        }
+
+        &centers {
+            @import 'pages/centers';
+        }
+
+        &contact {
+            @import 'pages/contact';
+        }
+
+        &home {
+            @import 'pages/home';
+        }
+
+        &news {
+            @import 'pages/news';
+        }
+
+        &news-detail {
+            @import 'pages/news-detail';
+        }
+    
+        &process {
+            @import 'pages/process';
+        }
+    
+        &products {
+            @import 'pages/products';
+        }
+
+        &products-detail {
+            @import 'pages/products-detail';
+        }
+    
+        &welfair {
+            @import 'pages/welfair';
+        }
+
+        &products, &products-detail {
+            @import 'partials/products-catalog';
+        }
+
+        &certificates {
+            @import 'pages/certificates';
+        }
+
+        &improvement-ideas {
+            @import 'pages/improvement-ideas';
+        }
+    }
+}

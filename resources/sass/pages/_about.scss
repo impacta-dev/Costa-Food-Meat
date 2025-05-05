@@ -1,0 +1,322 @@
+.header {
+    background-color: $c-primary;
+    color: #ffffff;
+
+    &__subtitle {
+        @extend %titleXL;
+    }
+
+    &__subtitle2 {
+        @extend %titleXL;
+        font-family: $font-bold;
+        margin-bottom: 40px;
+
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__text {
+        color: $c-primary-light;
+
+        a:link, a:hover, a:active, a:visited {
+            color: $c-primary-light;
+            text-decoration: underline;
+        }
+    }
+}
+
+.history {
+    @extend %paddingTop, %paddingBottom;
+    color: #ffffff;
+    
+    &__inner {
+        background: transparent url('/img/pages/about/history.jpg') no-repeat center center;
+        background-size: cover;
+        padding: 40px;
+        padding-bottom: 80px;
+    }
+
+    &__title {
+        @extend %titleXXL;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -40px;
+            width: 10px;
+            height: 100%;
+            background-color: $c-primary;
+        }
+    }
+    
+    &__subtitle {
+        @extend %titleXL;
+        font-family: $font-normal;
+        margin-bottom: 80px;
+    }
+
+    &__text {
+        margin-bottom: 3rem;
+
+        a:link, a:hover, a:active, a:visited {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    }
+
+    .btn {
+
+        &:link, &:active, &:visited {
+            background-color: #ffffff;
+            color: $c-primary;
+        }
+
+        &:hover {
+            background-color: $c-primary-light;
+            color: $c-primary;
+        }
+    }
+}
+
+.numbers, .numbers2 {
+    @extend %paddingBottom;
+
+    &__logo {
+        width: 80px;
+        height: auto;
+    }
+    
+    &__title {
+        @extend %titleXXL;
+        line-height: 3rem;
+    }
+    
+    &__subtitle {
+        font-family: $font-bold;
+        margin-bottom: 2rem;
+
+        strong {
+            color: $body-color;
+        }
+    }
+}
+
+.numbers {
+
+    &__subtitle {
+        color: $c-primary;
+    }
+
+    &__inner {
+        font-family: $font-bold;
+        color: $c-gray;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        
+        @include media-breakpoint-up(xl) {
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+        
+        strong {
+            font-family: 'Open Sans', sans-serif;
+            display: block;
+            color: $c-primary;
+            font-size: 2.2rem;
+            line-height: 3rem;
+            
+            @include media-breakpoint-up(xl) {
+                font-size: 8rem;
+                line-height: 9rem;
+            }
+        }
+    }
+
+    &__1, &__2, &__3 {
+        margin-bottom: 1rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-style: solid;
+        border-color: $c-primary;
+        border-width: 2px;
+        position: relative;
+        overflow: hidden;
+        
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 0;
+            padding: 4rem 7rem;
+        }
+
+        &::before {
+            visibility: hidden;
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            transition: transform 3s linear;
+        }
+
+        @include media-breakpoint-up(xl) {
+            &:hover {
+                color: #ffffff;
+    
+                &::before {
+                    transform: scale(1.5);
+                    visibility: visible;
+                }
+    
+                strong {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__1 {
+            border-right-width: 0;
+            border-bottom-width: 0;
+    
+            &::before {
+                background-image: url('/img/pages/about/data-meat.jpg');
+            }
+        }
+    
+        &__2 {
+            border-right-width: 0;
+    
+            &::before {
+                background-image: url('/img/pages/about/data-team.jpg');
+            }
+        }
+    
+        &__3 {
+            &::before {
+                background-image: url('/img/pages/about/data-world.jpg');
+            }
+        }
+    }
+}
+
+.numbers2 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+
+    &__subtitle {
+        color: $c-green;
+
+        a:link, a:hover, a:active, a:visited {
+            color: $c-green;
+        }
+    }
+    
+    &__item {
+        padding: 1.5rem;
+        border: 2px solid $c-primary;
+        font-family: $font-bold;
+        color: $c-gray;
+        
+        @include media-breakpoint-up(xl) {
+            padding: 4rem 7rem;
+            font-size: 3rem;
+            line-height: 3rem;
+
+            height: 370px !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        strong {
+            font-family: 'Open Sans', sans-serif;
+            display: block;
+            color: $c-green;
+            font-size: 2.2rem;
+            line-height: 3rem;
+
+            @include media-breakpoint-up(xl) {
+                font-size: 8rem;
+                line-height: 9rem;
+            }    
+        }
+
+        &--single {
+            text-align: center;
+            
+            strong {
+                display: inline;
+            }
+        }
+    }
+}
+
+.team {
+    @extend %paddingBottom;
+    color: #ffffff;
+
+    & > div {
+        background-color: $c-primary;
+    }
+    
+    &__info {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    &__title {
+        font-family: $font-normal;
+        @extend %titleL;
+        padding-bottom: 2rem;
+    }
+    
+    &__text {
+        @extend %titleM;
+        line-height: $lineHeightM;
+    }
+
+    &__image {
+        background: transparent url('/img/pages/about/team.jpg?v1') no-repeat center center;
+        background-size: cover;
+    }
+}
+
+.safety {
+    @extend %paddingBottom;
+    @extend %titleS;
+    background: transparent url('/img/pattern-dot.png') repeat;
+
+    &__title {
+        color: $c-primary;
+        font-family: $font-bold;
+        @extend %titleXXL;
+    }
+
+    &__image {
+        background: transparent url('/img/pages/about/team3.jpg?v1') no-repeat center center;
+        background-size: cover;
+    }
+
+    &__certs {
+        @extend %titleS;
+        color: $c-primary;
+        font-family: $font-bold;
+
+        & > div {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    }
+}

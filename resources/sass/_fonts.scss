@@ -1,0 +1,96 @@
+// Font family: Euclid Flex
+
+@font-face {
+  font-family: 'EuclidFlexLight';
+  src: url('/fonts/EuclidFlexLight.ttf') format('truetype'),
+       url('/fonts/EuclidFlexLight.woff') format('woff');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+$font-light: 'EuclidFlexLight';
+
+@font-face {
+  font-family: 'EuclidFlex';
+  src: url('/fonts/EuclidFlex.ttf') format('truetype'),
+       url('/fonts/EuclidFlex.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-normal: 'EuclidFlex';
+
+@font-face {
+  font-family: 'EuclidFlexBold';
+  src: url('/fonts/EuclidFlexBold.ttf') format('truetype'),
+       url('/fonts/EuclidFlexBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+$font-bold: 'EuclidFlexBold';
+
+// Font family: Open Sans
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+// Font styles
+
+%titleOMG {
+  font-size: 2.8rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 4.7rem;
+  }
+}
+
+%titleXXL {
+  font-size: 2rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 3.5rem;
+  }
+}
+
+%titleXL {
+  font-size: 1.8rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 2.9rem;
+  }
+}
+
+%titleL {
+  font-size: 2rem;
+  line-height: 2.2rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 2.5rem;
+    line-height: initial;
+  }
+}
+
+%titleM {
+  font-size: 1.2rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.6rem;
+    line-height: initial;
+  }
+}
+
+%titleS {
+  font-size: 1.15rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.3rem;
+  }
+}
+
+%titleXS {
+  font-size: 1rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1rem;
+  }
+}

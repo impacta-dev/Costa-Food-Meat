@@ -1,0 +1,119 @@
+.header {
+    background: $c-gray-light url('/img/pattern-dot.png');
+    padding-bottom: 50px;
+
+    &__title {
+        color: $c-primary;
+    }
+
+    &__line {
+
+        &::before {
+            background-color: $c-primary;
+        }
+    }
+
+    &__btn-back {
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 3rem;
+        }
+
+        &:link, &:hover, &:active, &:visited {
+            color: $c-gray;
+            text-decoration: none;
+        }
+
+        &::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin-right: 4px;
+            background: transparent url('/img/arrow-l-gray.svg') no-repeat center center;
+            background-size: contain;
+        }
+    }
+
+    &__subtitle {
+        color: $c-primary;
+        @extend %titleXL;
+        font-family: $font-normal;
+        margin-bottom: 1rem;
+    }
+
+    &__date {
+        color: $c-primary;
+    }
+
+    &__image {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 20px;
+        
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 100px;
+        }
+    }
+
+    &__share {
+
+        a {
+            width: 60px;
+            height: 60px;
+            background-color: #ffffff;
+            display: flex;
+            padding: 20px;
+            border-style: solid;
+            border-color: $c-primary;
+            border-width: 1px 1px 1px 0px;
+
+            &:first-child {
+                border-left-width: 1px;
+            }
+
+            &:hover {
+                background-color: $c-gray-light;
+            }
+        }
+    }
+}
+
+.content {
+    @extend %paddingTop, %paddingBottom;
+    @extend %titleS;
+    color: $c-gray;
+
+    p {
+        margin-bottom: 3rem;
+
+        &:last-child {
+            margin-bottom: initial;
+        }
+    }
+
+    img {
+        margin-bottom: 3rem;
+    }
+}
+
+.related {
+    @extend %paddingTop, %paddingBottom;
+    background-color: $c-primary-dark;
+
+    &__title {
+        color: #ffffff;
+        font-family: $font-bold;
+        @extend %titleS;
+        margin-bottom: 2rem;
+    }
+
+    @include media-breakpoint-down(lg) {
+        .news-item:nth-child(3) {
+            display: none;
+        }
+    }
+}
