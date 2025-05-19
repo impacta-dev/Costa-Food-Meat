@@ -61,6 +61,7 @@ Route::group(['middleware' => 'under-construction'], function() {
             return response()->file($filePath, [
                 'Content-Type' => 'application/pdf',
                 'Content-Disposition' => 'inline; filename="cfm_china.pdf"',
+				'Cache-Control' => 'no-cache, must-revalidate',
             ]);
         } else {
             abort(404);
