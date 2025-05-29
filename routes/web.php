@@ -66,7 +66,21 @@ Route::group(['middleware' => 'under-construction'], function() {
         } else {
             abort(404);
         }
-    })->name('cfm_china');
+    });
+
+    Route::get('/catalogo', function () {
+        $filePath = public_path('/downloads/catalogo_cfm.pdf');
+    
+        if (file_exists($filePath)) {
+            return response()->file($filePath, [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'inline; filename="catalogo_cfm.pdf"',
+				'Cache-Control' => 'no-cache, must-revalidate',
+            ]);
+        } else {
+            abort(404);
+        }
+    });
 
     // Main routes
     Route::prefix(app()->getLocale())->group(function () {
