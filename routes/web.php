@@ -54,19 +54,7 @@ if ((@$_SESSION['edition_mode'] == $sess_hash ) && (@$_SESSION['backend_sess'] =
 // Routes
 Route::group(['middleware' => 'under-construction'], function() {
 
-    Route::get('/zh', function () {
-        $filePath = public_path('/downloads/cfm_china.pdf');
-    
-        if (file_exists($filePath)) {
-            return response()->file($filePath, [
-                'Content-Type' => 'application/pdf',
-                'Content-Disposition' => 'inline; filename="cfm_china.pdf"',
-				'Cache-Control' => 'no-cache, must-revalidate',
-            ]);
-        } else {
-            abort(404);
-        }
-    });
+    // Catálogo UE
 
     Route::get('/catalogo', function () {
         $filePath = public_path('/downloads/catalogo_cfm.pdf');
@@ -75,6 +63,22 @@ Route::group(['middleware' => 'under-construction'], function() {
             return response()->file($filePath, [
                 'Content-Type' => 'application/pdf',
                 'Content-Disposition' => 'inline; filename="catalogo_cfm.pdf"',
+				'Cache-Control' => 'no-cache, must-revalidate',
+            ]);
+        } else {
+            abort(404);
+        }
+    });
+
+    // Catálogo China
+
+    Route::get('/catalog-zh', function () {
+        $filePath = public_path('/downloads/cfm_china.pdf');
+    
+        if (file_exists($filePath)) {
+            return response()->file($filePath, [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'inline; filename="cfm_china.pdf"',
 				'Cache-Control' => 'no-cache, must-revalidate',
             ]);
         } else {
