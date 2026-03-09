@@ -6,6 +6,7 @@
 /public/img/product_sections
 /public/img/posts
 /public/img/products
+/public/downloads
 /storage/*.key
 /vendor
 .env
