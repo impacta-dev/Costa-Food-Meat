@@ -71,8 +71,7 @@ Route::group(['middleware' => 'under-construction'], function() {
     });
 
     // Catálogo China
-
-    Route::get('/catalog-zh', function () {
+    $chinaCatalogRoute = function () {
         $filePath = public_path('/downloads/cfm_china.pdf');
     
         if (file_exists($filePath)) {
@@ -84,7 +83,10 @@ Route::group(['middleware' => 'under-construction'], function() {
         } else {
             abort(404);
         }
-    });
+    };
+
+    Route::get('/catalog-zh', $chinaCatalogRoute);
+    Route::get('/zh', $chinaCatalogRoute);
 
     // Main routes
     Route::prefix(app()->getLocale())->group(function () {

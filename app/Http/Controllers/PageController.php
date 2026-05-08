@@ -52,7 +52,7 @@ class PageController extends Controller
 
         switch($page->view) {
             case 'home':
-                $posts_lang = in_array(app()->getLocale(), ['fr', 'zh']) ? 'en' : app()->getLocale();
+                $posts_lang = in_array(app()->getLocale(), ['fr', 'ch']) ? 'en' : app()->getLocale();
                 $data['latest_posts'] = Post::whereFeatured(1)
                     ->whereLangId($posts_lang)
                     ->take(3)
@@ -89,7 +89,7 @@ class PageController extends Controller
                 break;
             
             case 'news':
-                $posts_lang = in_array(app()->getLocale(), ['fr', 'zh']) ? 'en' : app()->getLocale();
+                $posts_lang = in_array(app()->getLocale(), ['fr', 'ch']) ? 'en' : app()->getLocale();
 
                 if ($item) {
                     // Posts by category
