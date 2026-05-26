@@ -46,7 +46,7 @@
                             <img src="/img/certs/ES-10028323.svg" alt="Certificado ES 10.028323/HU CE" class="img-fluid">
                         </div>
                         <div class="col d-flex align-items-center justify-content-center">
-                            <img src="/img/certs/ES-1008224B.svg" alt="Certificado ES 10.08224B CE" class="img-fluid">
+                            <img src="/img/certs/ES-1008224B-2.svg" alt="Certificado ES 10.08224B CE" class="img-fluid">
                         </div>
                     </div>
                 </div>
