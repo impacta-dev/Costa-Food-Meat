@@ -39,7 +39,8 @@
                     <img src="/img/certs/ES-1007986.svg" alt="" class="img-fluid mb-3">
                     <img src="/img/certs/ES-1003924.svg" alt="" class="img-fluid mb-3">
                     <img src="/img/certs/ES-10026735.svg" alt="" class="img-fluid mb-3">
-                    <img src="/img/certs/ES-10028323.svg" alt="" class="img-fluid">
+                    <img src="/img/certs/ES-10028323.svg" alt="" class="img-fluid mb-3">
+                    <img src="/img/certs/ES-1008224B.svg" alt="" class="img-fluid">
                     {{--  <img src="/img/certs/sgs-w.svg" alt="SGS ISO 9001 System Certification" class="img-fluid">  --}}
                     {{--  <img src="/img/certs/brc.svg" alt="BRC FOOD certificated" class="img-fluid">
                     <img src="/img/certs/ifs.svg" alt="International Featured Standards" class="img-fluid">  --}}
