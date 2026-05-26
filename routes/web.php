@@ -85,8 +85,8 @@ Route::group(['middleware' => 'under-construction'], function() {
         }
     };
 
-    Route::get('/catalog-zh', $chinaCatalogRoute);
-    Route::get('/zh', $chinaCatalogRoute);
+    Route::get('/catalog-ch', $chinaCatalogRoute);
+    Route::get('/ch', $chinaCatalogRoute);
 
     // Main routes
     Route::prefix(app()->getLocale())->group(function () {
