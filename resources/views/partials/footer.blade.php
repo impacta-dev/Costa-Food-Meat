@@ -25,7 +25,9 @@
                 <strong>{!! $utils->content('address_roda_title') !!}</strong><br>
                 {!! $utils->content('address_roda') !!}<br>
                 <strong>{!! $utils->content('address_litera_title') !!}</strong><br>
-                {!! $utils->content('address_litera') !!}
+                {!! $utils->content('address_litera') !!}<br>
+                <strong>{!! $utils->content('address_esfosa_title') !!}</strong><br>
+                {!! $utils->content('address_esfosa') !!}
                 <br><br>
                 {!! $utils->content('phone') !!}
                 <br>
